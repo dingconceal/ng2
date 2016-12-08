@@ -1,3 +1,4 @@
+import { TaskService } from './tasks/tasks.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
@@ -9,13 +10,15 @@ import { AppComponent } from './app.component';
 import { NavabarComponent } from './navabar/navabar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { TasksComponent } from './tasks/tasks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavabarComponent,
     SignupFormComponent,
-    NotFoundComponent    
+    NotFoundComponent,
+    TasksComponent    
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
     AlertModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
