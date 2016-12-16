@@ -1,4 +1,66 @@
-<navabar></navabar>
 
-<tasks></tasks>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a style="font-size:24px;" [routerLink]="['/']" class="navbar-brand" >Plweb</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a ></a></li>
+        <li><a ></a></li>
+        <li><a ></a></li>
+      </ul>
+      
+      <ul *ngIf="!isLogin" class="nav navbar-nav navbar-right">
+        <li><a style="font-size:14px;" [routerLink]="['/login']">登入</a></li>
+        <li><a style="font-size:14px;" [routerLink]="['/signup']">學生</a></li>
+        <li><a style="font-size:14px;" >教師登入</a></li>
+
+      </ul>
+      <ul *ngIf="isLogin && !isTeacher" class="nav navbar-nav navbar-right">
+        <li><a style="font-size:14px;" [routerLink]="['/login']">test</a></li>
+        <li><a style="font-size:14px;" [routerLink]="['/signup']">學生</a></li>
+        <li><a style="font-size:20px;color:#BFBFBF;">{{name}}</a></li>
+        <li><a [routerLink]="['/']"(click)="logout()">登出</a></li>
+      </ul>
+      <ul *ngIf="isLogin && isTeacher" class="nav navbar-nav navbar-right">
+        <li class="dropdown " dropdown>
+          <a class="dropdown-toggle" data-toggle="dropdown"  role="button" aria-expanded="false" 
+                style="font-size:14px;" dropdown-open >My Class<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a >Lesson</a></li>
+            <li><a >學生管理</a></li>
+            <li><a >測驗發布</a></li>
+            <li class="divider"></li>
+            <li><a >學生關注</a></li>
+            <li class="divider"></li>
+            <li><a [routerLink]="['/edit']">編輯</a></li>
+          </ul>
+        </li>
+
+        <li><a style="font-size:14px;"[routerLink]="['/']">學生</a></li>
+
+        
+
+        <li><a style="font-size:20px;color:#BFBFBF;">{{name}}</a></li>
+        <li><a style="font-size:13px;" [routerLink]="['/']"(click)="logout()">登出</a></li>
+      </ul>
+
+
+    </div><!-- /.navbar-collapse -->
+    
+  </div><!-- /.container-fluid -->
+
+</nav>
+
+
 <router-outlet></router-outlet>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { UsernameValidators } from './usernameValidators'
+import { UsernameValidators } from '../services/usernameValidators'
 @Component({
   selector: 'signup',
   templateUrl: './signup-form.component.html',
@@ -14,7 +14,7 @@ export class SignupFormComponent implements OnInit {
 
   form: FormGroup;
   signup(){
-      //console.log(this.form.value);
+      console.log(this.form.value);
   }
   constructor(fb: FormBuilder) { 
       this.form = fb.group({

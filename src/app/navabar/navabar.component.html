@@ -19,12 +19,22 @@
         <li><a ></a></li>
       </ul>
       
-      <ul class="nav navbar-nav navbar-right">
-        <li><a [routerLink]="['/signup']">登入</a></li>
-        <li><a >學生註冊</a></li>
-        <li><a >教師註冊</a></li>
-        
+      <ul *ngIf="!isLogin" class="nav navbar-nav navbar-right">
+        <li><a [routerLink]="['/login']">登入</a></li>
+        <li><a [routerLink]="['/signup']">學生</a></li>
+        <li><a >教師登入</a></li>
+      </ul>
+      <ul *ngIf="isLogin && !isTeacher" class="nav navbar-nav navbar-right">
+        <li><a [routerLink]="['/login']">test</a></li>
+        <li><a [routerLink]="['/signup']">學生</a></li>
+        <li><a >教師登入</a></li>
+      </ul>
+      <ul *ngIf="isLogin && isTeacher" class="nav navbar-nav navbar-right">
+        <li><a [routerLink]="['/login']">teacher</a></li>
+        <li><a [routerLink]="['/signup']">學生</a></li>
+        <li><a >教師登入</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<input type="button" (click)="test()" value="test" >

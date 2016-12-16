@@ -4776,6 +4776,10 @@ moment@2.15.1:
   version "2.15.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.15.1.tgz#e979c2a29e22888e60f396f2220a6118f85cd94c"
 
+monaco-editor:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.7.0.tgz#db4ae9f9eeb8f419c7922c14e1dcdbfe33c925c4"
+
 morgan@^1.5.2:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.7.0.tgz#eb10ca8e50d1abe0f8d3dad5c0201d052d981c62"
@@ -4847,6 +4851,14 @@ ng2-bootstrap:
   resolved "https://registry.yarnpkg.com/ng2-bootstrap/-/ng2-bootstrap-1.1.16.tgz#0c5cd83a1f89f8d215c43a99e7b9dedab577ac5b"
   dependencies:
     moment "2.15.1"
+
+ng2-dropdown@0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/ng2-dropdown/-/ng2-dropdown-0.0.15.tgz#cfb434db00268262ad3c8ee64444bc06d8b8edae"
+
+ng2-monaco-editor:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/ng2-monaco-editor/-/ng2-monaco-editor-0.0.1.tgz#1f0a8849552ff43da7fb208fd85ac7e316869ace"
 
 no-case@^2.2.0:
   version "2.3.0"

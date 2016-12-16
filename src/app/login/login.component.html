@@ -1,20 +1,20 @@
-<form [formGroup]="form" class="form-horizontal  col-md-offset-4" role="form" (ngSubmit)="signup()" >
+<form [formGroup]="form" class="form-horizontal  col-md-offset-4" role="form" (ngSubmit)="login($event)" >
     <div class="form-group">
       
-        <label class="inputEmail3" class="col-sm-2 control-lebel" for="username">Email</label>
+        <label class="inputEmail3" class="col-sm-2 control-lebel" for="email">Email</label>
         <div class ="col-sm-4">
         <input
-            id = "username"
-            type="text"
+            id = "email"
+            type="email"
             class="form-control"
             placeholder="請輸入電子郵件"
-            formControlName="username">
-        <div *ngIf="form.controls.username.touched && form.controls.username.errors">
+            formControlName="email">
+        <div *ngIf="form.controls.email.touched && form.controls.email.errors">
             <div 
-                *ngIf="form.controls.username.errors.required "
+                *ngIf="form.controls.email.errors.required "
                 class="alert alert-danger">Email is required.</div>
                 <div
-                   *ngIf="form.controls.username.errors.cannotContainSpace" 
+                   *ngIf="form.controls.email.errors.cannotContainSpace" 
                     class="alert alert-danger">Email cannot contain space.</div>
         </div>
       </div>
@@ -34,6 +34,6 @@
             class="alert alert-danger">Password is required.</div>
       </div>
     </div>
-    <button class="btn btn-primary col-md-offset-2" type="submit">signup</button>
+    <button class="btn btn-primary col-md-offset-2" type="submit">Login</button>
 </form>
 
