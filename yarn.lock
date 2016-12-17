@@ -4856,10 +4856,6 @@ ng2-dropdown@0.0.15:
   version "0.0.15"
   resolved "https://registry.yarnpkg.com/ng2-dropdown/-/ng2-dropdown-0.0.15.tgz#cfb434db00268262ad3c8ee64444bc06d8b8edae"
 
-ng2-monaco-editor:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/ng2-monaco-editor/-/ng2-monaco-editor-0.0.1.tgz#1f0a8849552ff43da7fb208fd85ac7e316869ace"
-
 no-case@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.0.tgz#ca2825ccb76b18e6f79d573dcfbf1eace33dd164"

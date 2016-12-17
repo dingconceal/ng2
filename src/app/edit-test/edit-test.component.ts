@@ -38,6 +38,30 @@ export class EditTestComponent implements OnInit, AfterViewInit {
   constructor() {}
 
   get value():string { return this._value; };
+  test(){
+    var a = this.runJavaScript(this.value);
+    alert(a);
+  }
+
+  runJavaScript(code) {
+			let buffer = [];
+			let stdout = '';
+			console.log = function () {
+				buffer.push(arguments);
+			}
+			{
+				try {
+					eval(code);
+					buffer.forEach((e) => {
+						Array.prototype.slice.call(e).forEach((str) => (stdout += (str.toString() + '\n')));
+					});
+				} catch (err) {
+					stdout = err.message;
+				}
+			}
+			return stdout;
+		}
+
 
   ngOnInit() {
   }
@@ -88,7 +112,7 @@ export class EditTestComponent implements OnInit, AfterViewInit {
     options.language = this.language;
 
     this._editor = monaco.editor.create(myDiv, options);
-
+    
     // Set language defaults
     // We already set the language on the component so we act accordingly
     if(this.language_defaults !== null) {
